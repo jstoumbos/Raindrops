@@ -1,12 +1,13 @@
 class Catcher {
   
   Catcher() {
-    
+    photo1 = loadImage("kirbybasket.jpg.png");
+    x = width/2;
   }
     
     void display() {
-      fill(300,100,100,70);
-     ellipse(mouseX, mouseY, 50, 50);
+    imageMode(CENTER);
+    image(photo1, x, height-40, 50, 50);
     }
   }
 

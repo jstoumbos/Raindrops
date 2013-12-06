@@ -1,4 +1,4 @@
-Raindrops[] rain = new Raindrops[300];
+Raindrops[] rain = new Raindrops[50];
 Catcher c1;
 
 void setup() {
@@ -13,10 +13,11 @@ void setup() {
 void draw() {
   noStroke();
   background(0);
+  fill(170,70,100);
+  rect(0,height-20,width,20);
+  c1.display();
   for (int i=0; i < rain.length; i++) {
     rain[i].display();
     rain[i].fall();
   }
-  c1.display();
 }
-

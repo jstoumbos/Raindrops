@@ -1,9 +1,11 @@
 class Catcher {
   PImage photo1;
   PVector loc;
+  int score = 0;
 
   Catcher() {
     photo1 = loadImage("kirbybasket.jpg.png");
+    //kirby image for catcher
     loc = new PVector(width/2, height - 50);
   }
 
@@ -16,5 +18,6 @@ class Catcher {
     if (keyPressed && key == 'k') {
       loc.x = loc.x+3;
     }
+    //allows kirby to move left and right by pressing the "j" and "k" keys
   }
 }

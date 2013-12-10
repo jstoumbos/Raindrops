@@ -6,7 +6,7 @@ class Raindrops {
   Raindrops() {
     loc = new PVector(random(5, width-5), 0);
     vel = new PVector(0, random(-2, 2));
-    acc = new PVector(0, 0.003);
+    acc = new PVector(0, 0.002);
   }
 
   void display() {
@@ -20,5 +20,11 @@ class Raindrops {
   void fall() {
     loc.add(vel);
     vel.add(acc);
+  }
+
+  void kirby(Catcher c) {
+    if (dist(loc.x, loc.y, c.loc.x, c.loc.y) < 20) {
+      loc.y = 0;
+    }
   }
 }

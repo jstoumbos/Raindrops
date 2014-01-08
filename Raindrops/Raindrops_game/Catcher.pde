@@ -2,6 +2,7 @@ class Catcher {
   PImage photo1;
   PVector loc;
   int score = 0;
+  int lives = 1;
 
   Catcher() {
     photo1 = loadImage("kirbybasket.jpg.png");
